@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'BaiduBCEReader'
-  s.version      = '2.0.0'
+  s.version      = '2.0.0.1'
   s.summary      = 'Baidu BCE iOS Reader SDK'
   s.homepage     = 'https://cloud.baidu.com/doc/DOC/iOSDocReaderSDK.html'
   s.license      = {
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
   s.vendored_frameworks = 'framework/DocPlayerSDK.framework'
-  s.resource_bundle = {'DocPlayerSDK' => 'framework/DocPlayerSDK.framework/Resources/DocPlayerSDK.Bundle/*'}
+  s.resource_bundle = {'DocPlayerSDK' => 'framework/DocPlayerSDK.framework/Resources/DocPlayerSDK.bundle/*'}
   s.frameworks = 'Foundation', 'Webkit'
+  s.dependency 'ZipArchive', '~>1.0'
   s.libraries = 'z'
 end
